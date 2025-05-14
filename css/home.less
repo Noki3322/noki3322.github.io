@@ -1,0 +1,294 @@
+html {
+  background-color: #fff;
+}
+html,
+body {
+  height: 100%;
+}
+.in {
+  transform: translate3d(0, 0, 0) !important;
+  opacity: 1 !important;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.out {
+  transform: translate3d(-100%, 0, 0) !important;
+  opacity: 0 !important;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+@media (max-width: 991px) {
+  #fullPage {
+    .section {
+      text-align: center;
+      font-size: 1rem;
+      color: #fff;
+      position: relative;
+      .wrapper {
+        position: absolute;
+        left: 0;
+        top: calc(50% + 3.3rem);
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+
+        .container {
+          transform: translate3d(-100%, 0, 0);
+          opacity: 0;
+          will-change: transform;
+          .title {
+            font-size: 1.875rem;
+            font-weight: bold;
+            line-height: 1.875rem;
+            position: relative;
+            top: -20px;
+          }
+
+          .description {
+            font-size: 1.25rem;
+            opacity: 0.8;
+            margin: 12px 0 28px;
+            margin: -0.8rem 0 1.6rem;
+            line-height: 1.2;
+            br {
+              display: none;
+            }
+          }
+          .row {
+            padding-left: 15px;
+            p {
+              opacity: 0.8;
+              line-height: 1.5;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .block-1,
+      .block-2,
+      .block-3 {
+        transform: rotate(16deg);
+        position: absolute;
+        left: -100px;
+        top: 53%;
+        width: 200%;
+        height: 400px;
+        .mouse {
+          display: none;
+        }
+      }
+      .block-1 {
+        background-color: #019079;
+      }
+      .block-2 {
+        background-color: #2068bc;
+      }
+      .block-3 {
+        background-color: #b10027;
+      }
+
+      .imgwrapper-1,
+      .imgwrapper-2,
+      .imgwrapper-3 {
+        position: absolute;
+        top: 3.3rem;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: url('../images/P1M.png') center no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .imgwrapper-2 {
+        background: url('../images/P2M.png') center no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .imgwrapper-3 {
+        background: url('../images/P3M.png') center no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .position-absolute {
+        display: none;
+      }
+      .toCase {
+        color: #fff;
+        margin-top: 16px;
+        display: block;
+        text-decoration: underline;
+      }
+    }
+  }
+  #myMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  #fullPage {
+    .section {
+      text-align: center;
+      font-size: 16px;
+      color: #fff;
+      position: relative;
+
+      .wrapper {
+        position: absolute;
+        left: 0;
+        bottom: 50%;
+        transform: translateY(60%);
+        width: 100%;
+        font-size: 16px;
+        text-align: left;
+
+        .container {
+          transform: translate3d(-100%, 0, 0);
+          opacity: 0;
+          will-change: transform;
+          .title {
+            font-size: 40px;
+            font-weight: bold;
+          }
+
+          .description {
+            font-size: 20px;
+            opacity: 0.8;
+            margin: 12px 0 28px;
+          }
+          p {
+            opacity: 0.8;
+            line-height: 1.5;
+            margin: 0;
+          }
+
+          .row {
+            width: 374px;
+          }
+        }
+      }
+
+      .block-1,
+      .block-2,
+      .block-3 {
+        -webkit-transform: skewX(19deg);
+        -moz-transform: skewX(19deg);
+        -ms-transform: skewX(19deg);
+        -o-transform: skewX(19deg);
+        transform: skewX(19deg);
+        width: 49%;
+        background-color: #019079;
+        height: 100%;
+        position: relative;
+
+        .mouse {
+          -webkit-transform: skewX(-19deg);
+          -moz-transform: skewX(-19deg);
+          -ms-transform: skewX(-19deg);
+          -o-transform: skewX(-19deg);
+          transform: skewX(-19deg);
+          position: absolute;
+          right: 100px;
+          bottom: 170px;
+        }
+      }
+
+      .block-2 {
+        background-color: #2068bc;
+      }
+
+      .block-3 {
+        background-color: #b10027;
+      }
+
+      .imgwrapper-1,
+      .imgwrapper-2,
+      .imgwrapper-3 {
+        top: 0;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 68%;
+        background: url('../images/P1.jpg') center no-repeat;
+        background-size: cover;
+      }
+
+      .imgwrapper-2 {
+        background: url('../images/P2.jpg') center no-repeat;
+        background-size: cover;
+      }
+
+      .imgwrapper-3 {
+        background: url('../images/P3.jpg') center no-repeat;
+        background-size: cover;
+      }
+
+      .position-absolute {
+        width: 100%;
+        bottom: 60px;
+        left: 0;
+        text-align: left;
+        .row {
+          width: 565px;
+          text-align: center;
+          .line {
+            width: 158px;
+            height: 2px;
+            background-color: #fff;
+            margin-top: 12px;
+            margin-left: 15px;
+            position: relative;
+            will-change: left;
+          }
+          > div {
+            opacity: 0.7;
+            font-size: 20px;
+
+            &.active {
+              opacity: 1;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #myMenu {
+    position: absolute;
+    width: 100%;
+    bottom: 60px;
+    left: 0;
+    text-align: left;
+    .row {
+      width: 565px;
+      text-align: center;
+      div {
+        height: 50px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          height: 50px;
+          display: block;
+        }
+      }
+      .line {
+        width: 158px;
+        height: 2px;
+        background-color: #fff;
+        margin-left: 15px;
+        position: relative;
+        will-change: left;
+      }
+      > div {
+        opacity: 0.7;
+        font-size: 20px;
+
+        &.active {
+          opacity: 1;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

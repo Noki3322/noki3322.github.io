@@ -1,0 +1,67 @@
+@media (max-width: 991px) {
+  body {
+    background: url('../images/caseList/bgM.jpg') 0 3.5rem no-repeat;
+    background-size: 100%;
+    background-color: #000;
+  }
+  .title {
+    padding: 6.5rem 1.6rem 3rem;
+    font-size: 24px;
+    color: #fff;
+  }
+  .col-lg-6 {
+    padding: 0 !important;
+    .description {
+      left: 0 !important;
+      width: 100% !important;
+    }
+  }
+}
+@media (min-width: 992px) {
+  body {
+    background: url('../images/caseList/bg.jpg') 0 0 no-repeat;
+    background-size: 100%;
+    background-color: #000;
+  }
+  .title {
+    margin: 90px 0;
+    font-size: 34px;
+    color: #fff;
+  }
+}
+.box-shadow {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+.container {
+  .row {
+    .col-lg-6 {
+      padding: 0 0.25rem;
+      position: relative;
+      cursor: pointer;
+      img {
+        width: 100%;
+        display: block;
+      }
+      .description {
+        position: absolute;
+        width: calc(100% - 0.5rem);
+        background-color: rgba(0, 0, 0, 0.6);
+        left: 0.25rem;
+        bottom: 0;
+        padding: 10px;
+        > p {
+          font-size: 16px;
+          color: #ffffff;
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          line-height: 1.5;
+          -webkit-box-orient: vertical;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

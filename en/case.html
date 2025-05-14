@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTC design</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/case.css">
+</head>
+
+<body>
+  <header class="fixed-top">
+    <nav class="navbar bg-light navbar-light navbar-expand-lg container">
+      <a class="navbar-brand" href="./index.html">NTC design</a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link mr-5" href="./index.html">HOMEPAGE</a>
+          <a class="nav-item nav-link active mr-5" href="./case.html">WORKS</a>
+          <a class="nav-item nav-link active mr-5 toggleLanguage" href="../case.html">中文</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container mb-lg-5">
+    <div class="title">Design for better</div>
+    <div class="row">
+      <div class="col-lg-6 mb-lg-2" data-id="1"><img class="lazy" data-original="../images/caseList/1.jpg" alt="">
+        <div class="description">
+          <p>Serum: Integrated digital currency ecosystem</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="2"><img class="lazy" data-original="../images/caseList/2.jpg" alt="">
+        <div class="description">
+          <p>Sollet: A crypto wallet & gateway to blockchain app</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="3"><img class="lazy" data-original="../images/caseList/3.jpg" alt="">
+        <div class="description">
+          <p>NEWS For our main product News app I draft prototype to help revamp social module, optimize UX to grow
+            active users.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="4"><img class="lazy" data-original="../images/caseList/4.jpg" alt="">
+        <div class="description">
+          <p>Transformed the new product idea by formulating and executing the product strategies to launch
+            successfully, monitored the user data of the new launched product, redefined product features. Anchor
+            projects including WEIBO STORY</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="5"><img class="lazy" data-original="../images/caseList/5.jpg" alt="">
+        <div class="description">
+          <p>Day to day operational activity H5 Operation banner design</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="6"><img class="lazy" data-original="../images/caseList/6.jpg" alt="">
+        <div class="description">
+          <p>3d design</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="7"><img class="lazy" data-original="../images/caseList/7.jpg" alt="">
+        <div class="description">
+          <p>Product and service innovation for sustainable brand value-add and business growth</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="8"><img class="lazy" data-original="../images/caseList/8.jpg" alt="">
+        <div class="description">
+          <p>Lenovo cloud computing</p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="9"><img class="lazy" data-original="../images/caseList/9.jpg" alt="">
+        <div class="description">
+          <p>Built up a new mobile platform, Alibaba Yun OS, by leading a team of max 4 ppl from product defining, rapid
+            prototype, developing to market launch.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-lg-2" data-id="10"><img class="lazy" data-original="../images/caseList/10.jpg" alt="">
+        <div class="description">
+          <p>Sf-express</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="d-none d-lg-block">
+    <div class="container contact">
+      <div class="row">
+        <div class="col-4">
+          <p>NEW BUSINESS</p>
+          <span class="email">jswddo@qq.com</span>
+        </div>
+        <div class="col-4">
+          <p>MEDIA & PR</p>
+          <span class="email">marketing@ntcdesignco.cn</span>
+        </div>
+        <div class="col-4">
+          <p>JOB ENQUIRIES</p>
+          <span class="email">careerntcdesignco.cn</span>
+        </div>
+      </div>
+    </div>
+    <div class="copywriter">&copy; NTC Design. All rights reserved.</div>
+  </footer>
+  <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="../js/lazyload.min.js"></script>
+  <script>
+    $(function () {
+      $(".lazy").lazyload({
+        effect: "fadeIn"
+      });
+      $('.col-lg-6').hover(function () {
+        $(this).siblings().stop().animate({ opacity: 0.8 }, 200).find('img')
+        $(this).find('img').addClass('box-shadow')
+      }, function () {
+        $(this).siblings().stop().animate({ opacity: 1 }, 200)
+        $(this).find('img').removeClass('box-shadow')
+      })
+      $('.col-lg-6').on('click', function () {
+        var id = $(this).attr('data-id')
+        if (document.body.clientWidth >= 992) {
+          location.href = `./caseDetail.html?id=${id}`
+        } else {
+          location.href = `./caseDetailM.html?id=${id}`
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

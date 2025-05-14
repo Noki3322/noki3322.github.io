@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTC design</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/caseDetail.css">
+</head>
+
+<body>
+  <header class="fixed-top transparentBg">
+    <nav class="navbar bg-light navbar-light navbar-expand-lg container">
+      <a class="navbar-brand" href="./index.html">NTC design</a>
+    </nav>
+  </header>
+  <main>
+  </main>
+  <footer>
+    &copy; NTC Design. All rights reserved.
+  </footer>
+  <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="../js/lazyload.min.js"></script>
+  <script>
+    $(function () {
+      var list = [
+        {
+          total: 5,
+          title: 'Serum: Integrated digital currency ecosystem that supports cross-chain, stablecoins, packaged tokens, order books, and futures trading'
+        },
+        {
+          total: 6,
+          title: 'Digital Wallet'
+        },
+        {
+          total: 4,
+          title: 'For our main product news app, I draft prototype to help revamp social module, optimize UX to grow active users.'
+        },
+        {
+          total: 7,
+          title: 'Transformed the new product idea by formulating and executing the product strategies to launch successfully, monitored the user data of the new launched product, redefined product features. Anchor projects including WEIBO STORY'
+        },
+        {
+          total: 9,
+          title: 'Day to day operational activity H5 Operation banner design'
+        },
+        {
+          total: 4,
+          title: '3D design'
+        },
+        {
+          total: 9,
+          title: 'Product and service innovation for sustainable brand value-add and business growth'
+        },
+        {
+          total: 4,
+          title: 'activity.lenovo.com.cn\nlenovocloud.com'
+        },
+        {
+          total: 5,
+          title: 'Built up a new mobile platform, Alibaba Yun OS, by leading a team of max 4 ppl from product defining, rapid prototype, developing to market launch.'
+        },
+        {
+          total: 8,
+          title: 'Sf-express'
+        },
+      ]
+      function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+      }
+      var id = getUrlParam('id')
+      var obj = list[id - 1]
+      var htmlStr = `<img class='lazy' data-original="../images/sample/${id}/1.jpg" alt="">
+                     <div class="container">
+                        <div class="title">${obj.title}</div>
+      `
+      var total = obj ? obj.total : 0
+      for (var i = 1; i < total; i++) {
+        htmlStr += `
+            <img class='lazy' data-original="../images/sample/${id}/${i + 1}.jpg" alt="">
+          `
+      }
+      htmlStr += '</div>'
+      $('body > main').html(htmlStr).find('.lazy').lazyload({
+        effect: "fadeIn",
+        threshold: 100
+      })
+    })
+  </script>
+</body>
+
+</html>
